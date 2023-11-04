@@ -10,3 +10,11 @@ body{
     height: 50px;
     font-size: 18pt;
 }
+#area{
+    padding: 100px;
+}
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
