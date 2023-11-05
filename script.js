@@ -1,21 +1,26 @@
-function teste() {
-
-    var mudar = document.querySelector("#area");
-    var top, left;
-    var area = mudar.getBoundingClientRect(); // Obtém as dimensões do elemento "area"
-
-    // Loop para garantir que a nova posição não se sobrepõe ao elemento "area"
-    do {
-        top = Math.floor(Math.random() * (800 - 600 + 1)) + 250;
-        left = Math.floor(Math.random() * (550 - 1000 + 1)) + 450;
-    } while (top + area.height > area.top && top < area.bottom && left + area.width > area.left && left < area.right);
-
-    mudar.style.position = "absolute";
-    mudar.style.top = top + "px";
-    mudar.style.left = left + "px";
+var but = document.getElementById("op2")
+var but2 = document.getElementById("op")
+var resp = document.getElementById("resp")
+function Nao(element) {
+    element.value = "Sim";
+    but.value = "Não";
+    color_def();
 }
 
-function Sim() {
-    var imagem = document.querySelector("#imagem");
-    imagem.src = "download.jpg"
+function Sim(element) {
+    element.value = "Sim";
+    but2.value = "Não";
+    color_def();
+}
+function color(){
+but2.style.background = "green"
+resp.innerHTML = "Bem baitola mesmo!"
+}
+function color2(){
+but.style.background = "green"
+resp.innerHTML = "Bem baitola mesmo!"
+}
+function color_def(){
+    but.style.background = "rgb(229, 229, 229)"
+    but2.style.background = "rgb(229, 229, 229)"
 }
